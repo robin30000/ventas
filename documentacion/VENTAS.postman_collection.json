@@ -1,0 +1,189 @@
+{
+	"variables": [],
+	"info": {
+		"name": "VENTAS",
+		"_postman_id": "bc590a5f-145e-5d59-b418-1f2a8ce91ee8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/ventas/controllers/ventasCtrl.php",
+			"request": {
+				"url": "http://localhost/ventas/controllers/ventasCtrl.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"ConsultaFactura\",\n\t\"id\":1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/ventas/controllers/ventasCtrl.php",
+			"request": {
+				"url": "http://localhost/ventas/controllers/ventasCtrl.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"FacturaVenta\",\n\t\"data\":{\n\t\t\"producto\": [\n\t\t\t{\n\t\t\t\t\"producto_id\":2,\n\t\t\t\t\"cantidad\":2\n\t\t\t},{\n\t\t\t\t\"producto_id\":1,\n\t\t\t\t\"cantidad\":1\n\t\t\t}\n\t\t],\n\t\t\"cliente_id\":1\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/ventas/controllers/productoCtrl.php",
+			"request": {
+				"url": "http://localhost/ventas/controllers/productoCtrl.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\":\"EditaProducto\",\n\t\"data\":{\n\t\"producto\":\"sandia\", \n\t\"precio\":2500, \n\t\"descripcion\":\"frutas\", \n\t\"foto\":\"imagen_sandio.jpg\", \n\t\"iva\": 10, \n\t\"cantidad\":5,\n\t\"id\":4\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/ventas/controllers/productoCtrl.php",
+			"request": {
+				"url": "http://localhost/ventas/controllers/productoCtrl.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\":\"NuevoProducto\",\n\t\"data\":{\n\t\"producto\":\"sandia\", \n\t\"precio\":2500, \n\t\"descripcion\":\"frutas\", \n\t\"foto\":\"imagen_sandio.jpg\", \n\t\"iva\": 10, \n\t\"cantidad\":5\n\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/ventas/controllers/productoCtrl.php",
+			"request": {
+				"url": "http://localhost/ventas/controllers/productoCtrl.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\":\"BuscarProducto\",\n\t\"data\":\"sandi\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/ventas/controllers/clienteCtrl.php",
+			"request": {
+				"url": "http://localhost/ventas/controllers/clienteCtrl.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\":\"EditaCliente\",\n\t\"data\":{\n\t\"cliente\":\"roberto santana\", \n\t\"telefono\":25020, \n\t\"email\":\"frutas@ql.com\",\n\t\"id\":1\n\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/ventas/controllers/clienteCtrl.php",
+			"request": {
+				"url": "http://localhost/ventas/controllers/clienteCtrl.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\":\"BuscarCliente\",\n\t\"data\": 1\n}"
+				},
+				"description": "buscar cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/ventas/controllers/clienteCtrl.php",
+			"request": {
+				"url": "http://localhost/ventas/controllers/clienteCtrl.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\":\"EliminaCliente\",\n\t\"data\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/ventas/controllers/ventasCtrl.php",
+			"request": {
+				"url": "http://localhost/ventas/controllers/ventasCtrl.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"totalVentas\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
