@@ -24,6 +24,13 @@ if (isset($data->method)) {
             $user->ConsultaFactura($data->id);
             break;
 
+        case 'totalVentas':
+            require_once '../class/venta.php';
+            $user = new venta();
+
+            $user->totalVentas();
+            break;
+
         default:
             echo 'ninguna opción.';
             break;

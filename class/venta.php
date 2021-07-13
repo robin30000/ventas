@@ -219,4 +219,33 @@ class venta
         }
     }
 
+    public function totalVentas()
+    {
+        session_start();
+
+        try {
+            $detProp = Conection::getInstance()->prepare("SELECT
+                                                                   sum(valor_total) valor,
+                                                                   fecha
+                                                                FROM
+                                                                    factura ");
+
+            $detProp->execute();
+            $res = $detProp->fetchAll(PDO::FETCH_ASSOC);
+
+            if ($detProp->rowcount()) {
+                $response = array('state' => 1, 'msg' => $res);
+            } else {
+                $response = array('state' => 0, 'msg' => 'No se encontraron reportes de ventas');
+            }
+
+            echo json_encode($response);
+
+
+        } catch (Exception $e) {
+            echo 'Error ' . $e->getMessage();
+        }
+
+    }
+
 }
